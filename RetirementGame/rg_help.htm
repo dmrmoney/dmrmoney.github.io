@@ -1,0 +1,57 @@
+<!doctype html>
+<head><title>User Guide, Retirement Game (v1)</title>
+    <style>
+        table,th,td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin:100px;
+        }
+        
+        th,td {
+            padding: 5px;
+            text-align: left;
+        }
+        .rightalign {   text-align: right; }
+        .centeralign {   text-align: center; }
+        </style>
+</head>
+
+<body>
+    <h1 class="centeralign">User Guide, Retirement Game (v1)</h1>
+    <p>This is a simple financial simulation of Sal, a salaried person who works 
+    from age 20 to 60, then lives a retired life until age 85.</p>
+    <p>You are Sal's advisor and advise him a single consistent investment strategy
+    for the funds coming from his savings and returns on investments. The allocation strategy will be applied at end of each year; this will also rebalance the portfolio.</p>
+    <p>The score is Sal's final inflation-adjusted net worth in mulitples of Sal's annual starting salary. </p>
+    <p>If Sal's investements do badly or expenses are more than revenue, Sal's net worth will decrease and may even go negative. Then he has to live off borrowings at 10% interest, and so, subsequently his net worth keeps going more negative every year. Therefore, with bad investement or insufficient savings rate, the final score may be negative.</p>
+    <p>There is a random element in returns from debt or equity, so the score will vary across runs. Extremely lucky runs can amass huge net worth.</p>
+    <p>For full details, see <a href="https://dmrmoney.wordpress.com/" align="right" target="_blank">"dmrmoney" blog</a> for post no. 7: 'Playing the Retirement Game'
+    </p>
+    <p></p>
+    <table width="80%">
+        <th colspan="2" class="centeralign">The Controls</th>
+        <tr><td>Expense Ratio</td><td>Expenditure as percentage of salary (not going into savings)</td></tr>
+        <tr><td> Allocate</td><td>Divide investments into classes</td></tr>
+        <tr><td>Fixed Deposit</td><td>Fixed income, low risk</td></tr>
+        <tr><td>Debt Fund</td><td>Debt instruments, medium risk, tax efficient</td></tr>
+        <tr><td>Equity</td><td>stock market, high risk</td></tr>
+        <tr><td>Chance of Loss</td><td>Probability that investment will go into loss</td></tr>
+        <tr><td>Number of Runs</td><td>repeat the game N times</td></tr>
+        <tr><td>Start</td><td>Click button to run the game N times</td></tr>
+    </table>
+    <p> </p>
+    <table width="80%">
+        <tr>
+        <th class="centeralign">Display Results</th>
+            </tr>
+        <tr>
+        <td>The output is a histogram that puts the individual scores of the N runs into buckets for different score ranges. The height of each bar is the number of runs that fall into that bucket. An ideal strategy would be 
+            <ol><li>risk free: no bars in negative score range</li>
+                <li>high returns: many tall bars in high score range</li>
+            </ol> 
+        <p>
+        Note: In case of 100% investements into Fixed Deposits, all scores are identical and only a single fat bucket is created.</p></td>
+            </tr>
+    </table>
+</body>
+<!-- </html> -->

@@ -1,0 +1,78 @@
+<!doctype html>
+<head>
+    <meta charset="UTF-8">
+    <title>Retirement Game</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+
+        }
+        th,td {
+            padding: 5px;
+            text-align: center;
+        }
+        .rightalign {   text-align: right; }
+        .centeralign {   text-align: center; }
+        </style>
+</head>
+
+<body>
+    <script src="rg1.js">
+    </script>
+    <h1 class="centeralign">The Retirement Game</h1>
+    <table style="width:80%" align:"center">
+        <th colspan="4" height="30px">retirement game v1</th>
+        <tr>
+        <td></td>
+        <td><label>Expense ratio:<input type="number" id="idExpRate" min="30" max="100" value="75"> % of salary
+                </label>
+        </td>
+        <td></td>
+        <td></td>
+        </tr>
+        <tr>
+            <th colspan="4"><b>Allocation Strategy</b></td>
+        </tr>
+        <tr>
+            <th></td>
+            <th>Fixed Deposit</td>
+            <th>Debt Funds</td>
+            <th>Equity</td>
+        </tr>
+        <tr>
+            <td>Allocate:</td>
+            <td><input type="number" id="idFDPc" min="0" max="100" value="50" size="4"> %</td>
+            <td><input type="number" id="idDebtPc" min="0" max="100" value="25" size="4"> %</td>
+            <td><input type="number" id="idEquityPc" min="0" max="100" value="25" size="4"> %</td>
+        </tr>
+        <tr>
+            <td>Chance of Loss:</td>
+            <td><input type="number" id="idFDLoss" min="0" max="50" value="0" size="4" disabled> %</td>
+            <td><input type="number" id="idDebtLoss" min="0" max="20" value="10" size="4"> %</td>
+            <td><input type="number" id="idEquityLoss" min="0" max="50" value="30" size="4"> %</td>
+        </tr>
+        <tr height="20px"></tr>
+        <tr>
+            <td>Number of runs</td>
+            <td><input type="number" id="idNRuns" min="1" max="1000" value="100"></td>
+            <td><input type="image" src="button.png" height="40" onclick=fn_run() </td>
+        </tr>
+    </table>
+    
+    
+    <hr>
+    <p class="centeralign"><a href="rg_help.htm" align="right" target="_blank">User Guide</a>
+    </p>
+    <p class="centeralign">For full details, see <a href="https://dmrmoney.wordpress.com/" align="right" target="_blank">dmrmoney blog</a> for post no. 7: 'Playing the Retirement Game'
+    </p>
+
+    <hr>
+<table>
+    <tr><div id="idStats"></div></tr>
+    <hr>
+    <tr><div id="idHistScore"></div></tr>
+</table>
+</body>
+<!-- </html> -->
